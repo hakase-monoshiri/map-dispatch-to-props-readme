@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
-import { addTodo } from  './actions/todos';
+import { addTodo } from  './actions/todo';
 
 class App extends Component {
 
@@ -50,4 +50,5 @@ class App extends Component {
   }
 };
 
-export default connect(state => ({ todos: state.todos }), { addTodo })(App);
+
+export default connect(mapStateToProps, {addTodo})(App);
